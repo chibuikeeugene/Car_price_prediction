@@ -1,0 +1,42 @@
+# package overview
+package_name: regression_model
+
+# Data files
+training_data_file: train.csv
+test_data_file: test.csv
+
+# Variables
+#The variable we are attempting to predict (MSRP)
+target: msrp
+
+pipeline_name: regression_model
+pipeline_save_file: regression_model_output_v
+
+features:
+  - engine_fuel_type 
+  - engine_hp 
+  - year # this is important for computing the car age
+
+# set the train-test split
+test_size: 0.3
+
+# set the random seed
+random_state: 1
+
+tol: 0.01
+
+# categorical variables with NA in train set
+categorical_vars_with_na_frequent: engine_fuel_type
+
+# numerical variables with NA in train set
+numerical_vars_with_na: engine_hp
+
+temporal_var: year
+
+dropped_var: year
+
+numerical_yeo_vars:
+  - highway_mpg
+  - city_mpg
+
+categorical_var: engine_fuel_type
