@@ -24,16 +24,16 @@ class AppConfig(BaseModel):
 
 class ModelConfig(BaseModel):
     """ all configuration relevant to model training and feature engineering. """
-    target: int
+    target: str
     features: List[str]
     test_size: float
     random_state: int
     tol: float
     categorical_vars_with_na_frequent: str
-    numerical_vars_with_na: float
-    temporal_var: int
-    dropped_var: int
-    numerical_yeo_vars: int
+    numerical_vars_with_na: str
+    temporal_var: str
+    dropped_var: str
+    #numerical_yeo_vars: str
     categorical_var: str
     n_estimators: int
 
@@ -64,6 +64,7 @@ def fetch_config_from_yaml(cfg_path:Path = None) -> YAML:
             return parsed_config
     raise OSError(f"Did not find config file at path: {cfg_path}")
 
+
 def create_and_validate_config(parsed_config: YAML = None) -> Config:
     """run validation on config values."""
     if parsed_config is None:
@@ -77,6 +78,7 @@ def create_and_validate_config(parsed_config: YAML = None) -> Config:
 
     return _config
 
-config = create_and_validate_config
+
+config = create_and_validate_config()
 
  

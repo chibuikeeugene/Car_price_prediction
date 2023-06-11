@@ -37,14 +37,14 @@ msrp_pipeline = Pipeline([
 
     ('frequent_imputation', CategoricalImputer(imputation_method='frequent', variables=config.model_config.categorical_vars_with_na_frequent)),
     
-    ('missing_indicator', AddMissingIndicator(variables=config.model_config.numerical_vars_with_na)),
+    #('missing_indicator', AddMissingIndicator(variables=config.model_config.numerical_vars_with_na)),
 
     ('median_imputation', MeanMedianImputer(imputation_method='median', variables=config.model_config.numerical_vars_with_na)),
 
     # ==== TEMPORAL VARIABLE - CREATING NEW CAR AGE VAR ====
     ('elapsed_time', f.CarAge(variables=config.model_config.temporal_var)),
 
-    ('drop_features', DropFeatures(features_to_drop=config.model_config.dropped_var)),
+    ('drop_features', DropFeatures(features_to_drop=[config.model_config.dropped_var])),
 
     # === CATEGORIAL ENCODING ====
     ('rare_label_encoder', RareLabelEncoder(tol=0.01, n_categories=1, variables=config.model_config.categorical_var)),

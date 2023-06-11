@@ -5,17 +5,17 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 class CarAge(BaseEstimator, TransformerMixin):
     """elaspe time transformer"""
-    def __init__(self, variables:int):
+    def __init__(self, variables:str):
 
         # if not isinstance(variables, int):
         #     raise TypeError('invalid data type, var should be int')
         self.variables = variables
 
-    def fit(self, X, y = None):
+    def fit(self, X: pd.DataFrame, y: pd.Series = None):
         #this helps fit the sklearn pipeline
         return self
     
-    def transform(self, X):
+    def transform(self, X: pd.DataFrame) -> pd.DataFrame:
         #we create a copy of our dataframe
         X = X.copy()
 

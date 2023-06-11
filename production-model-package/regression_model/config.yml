@@ -23,6 +23,9 @@ test_size: 0.3
 # set the random seed
 random_state: 1
 
+# set the number of estimators
+n_estimators: 100
+
 tol: 0.01
 
 # categorical variables with NA in train set
