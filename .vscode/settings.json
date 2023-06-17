@@ -1,3 +1,6 @@
 {
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        "./production_model_package"
+    ]
 }
