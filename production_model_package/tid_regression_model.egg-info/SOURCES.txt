@@ -12,11 +12,14 @@ regression_model/train_pipeline.py
 regression_model/config/__init__.py
 regression_model/config/core.py
 regression_model/datasets/__init__.py
+regression_model/datasets/test.csv
+regression_model/datasets/train.csv
 regression_model/processing/__init__.py
 regression_model/processing/data_manager.py
 regression_model/processing/feature.py
 regression_model/processing/validation.py
 regression_model/trained_models/__init__.py
+regression_model/trained_models/regression_model_output_v0.0.1.pkl
 tests/test_features.py
 tests/test_prediction.py
 tid_regression_model.egg-info/PKG-INFO

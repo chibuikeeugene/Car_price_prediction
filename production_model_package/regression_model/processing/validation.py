@@ -56,7 +56,6 @@ class CarDataInputSchema(BaseModel):
     highway_mpg: Optional[int]
     city_mpg: Optional[int]
     popularity: Optional[int]
-    msrp: Optional[int]
 
 
 class MultipleCarDataInputs(BaseModel):

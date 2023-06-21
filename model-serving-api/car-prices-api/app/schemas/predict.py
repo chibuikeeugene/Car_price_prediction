@@ -1,7 +1,7 @@
 from typing import Any, List, Optional
 
-from regression_model.processing.validation import CarDataInputSchema
 from pydantic import BaseModel
+from regression_model.processing.validation import CarDataInputSchema
 
 
 class PredictionResults(BaseModel):
@@ -33,7 +33,6 @@ class MultipleCarDataInputs(BaseModel):
                         "highway_mpg": 26,
                         "city_mpg": 19,
                         "popularity": 3916,
-                        "msrp": 46135,
                     }
                 ]
             }
