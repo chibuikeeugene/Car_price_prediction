@@ -5,10 +5,10 @@ FROM python:3.9.12
 RUN adduser --disabled-password --gecos '' ml-api-user
 
 COPY ./car-prices-api /opt/car-prices-api/
-# # Make directory
-# RUN mkdir /app
 
-# Set the working directory in the container
+ARG PIP_EXTRA_INDEX_URL
+
+# Set the working directory in the container in which our commands will be run from
 WORKDIR /opt/car-prices-api
 
 # Install the dependencies
