@@ -5,6 +5,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from loguru import logger
 
+import uvicorn
+
 from app.api import api_router
 from app.config import settings, setup_app_logging
 
@@ -53,6 +55,5 @@ if settings.BACKEND_CORS_ORIGINS:
 if __name__ == "__main__":
     # Use this for debugging purposes only
     logger.warning("Running in development mode. Do not run like this in production.")
-    import uvicorn
 
     uvicorn.run(app, host="localhost", port=8001, log_level="debug")

@@ -3,6 +3,11 @@ pyproject.toml
 setup.py
 ./requirements/requirements.txt
 ./requirements/test_requirements.txt
+car_price_regression_model.egg-info/PKG-INFO
+car_price_regression_model.egg-info/SOURCES.txt
+car_price_regression_model.egg-info/dependency_links.txt
+car_price_regression_model.egg-info/requires.txt
+car_price_regression_model.egg-info/top_level.txt
 regression_model/VERSION
 regression_model/__init__.py
 regression_model/config.yml
@@ -19,11 +24,6 @@ regression_model/processing/data_manager.py
 regression_model/processing/feature.py
 regression_model/processing/validation.py
 regression_model/trained_models/__init__.py
-regression_model/trained_models/regression_model_output_v0.0.1.pkl
+regression_model/trained_models/regression_model_output_v3.0.0.pkl
 tests/test_features.py
 tests/test_prediction.py
-tid_regression_model.egg-info/PKG-INFO
-tid_regression_model.egg-info/SOURCES.txt
-tid_regression_model.egg-info/dependency_links.txt
-tid_regression_model.egg-info/requires.txt
-tid_regression_model.egg-info/top_level.txt
